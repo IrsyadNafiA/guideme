@@ -19,8 +19,14 @@
     </head>
     <body>
         @include('layouts.navbar')
-        @yield('main')
-        @include('layouts.footer')
+        <div class="relative min-h-[100vh]">
+            <div class="pb-10">
+                @yield('main')
+            </div>
+        </div>
+        <footer class="w-full flex bg-[#1b1b1b] justify-center">
+            @include('layouts.footer')
+        </footer>
     </body>
     <script src="{{ asset ('assets') }}/js/lib/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap-->

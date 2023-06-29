@@ -1,4 +1,4 @@
-<footer class="bg-[#1b1b1b] text-white text-center h-fit flex flex-col gap-4 lg:flex-row justify-between items-center px-10 py-8 relative w-full bottom-0">
+<div class="w-[1536px] text-white text-center h-fit flex flex-col gap-4 lg:flex-row justify-between items-center px-4 py-8">
   <div>
     <h1 class="text-3xl font-black">Guide Me</h1>
   </div>
@@ -11,6 +11,6 @@
       <SocialIcon icon={Twitter} alt="Twitter" link="#" />
       <SocialIcon icon={Facebook} alt="Facebook" link="#" /> --}}
   </div>
-</footer>
+</div>
 
 @yield('footer')

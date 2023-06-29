@@ -15,7 +15,7 @@
         <title>{{ $title }} - GuideMe</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{ mix('css/app.css')}}">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         @include('layouts.navbar')

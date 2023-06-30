@@ -48,6 +48,12 @@ Route::get('/detail', function () {
     ]);
 });
 
+Route::get('/seemore', function () {
+    return view('pages.seemore', [
+        "title" => "See More"
+    ]);
+});
+
 Route::get('/homea', function () {
     #dd(Location::get(request()->ip()));
 

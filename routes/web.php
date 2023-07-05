@@ -42,15 +42,27 @@ Route::get('/contact', function () {
     ]);
 });
 
+Route::get('/detail', function () {
+    return view('pages.detail', [
+        "title" => "Details"
+    ]);
+});
+
+Route::get('/seemore', function () {
+    return view('pages.seemore', [
+        "title" => "See More"
+    ]);
+});
+
 Route::get('/homea', function () {
     #dd(Location::get(request()->ip()));
-    
-//    $ipicad = '180.242.198.192';
-//    $ipq = '180.242.194.16';
-//     if ($position = (Location::get($ipicad))) {
-    
-//         return view('pages.home', compact('position'), [ "title" => "Home"]);
-//     }else {
-//     echo 'fail';
-//     }
+
+    //    $ipicad = '180.242.198.192';
+    //    $ipq = '180.242.194.16';
+    //     if ($position = (Location::get($ipicad))) {
+
+    //         return view('pages.home', compact('position'), [ "title" => "Home"]);
+    //     }else {
+    //     echo 'fail';
+    //     }
 });

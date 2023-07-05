@@ -21,12 +21,14 @@
         </div>
     </div>
 </div>
-
+<h1 class="text-center my-7 text-4xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Arrival Location</h1>
 <div class="w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
-    <div class="w-[1280px] flex justify-between items-center py-5">
-        <img src="#" alt="ini gambar">
-        <p class="text-lg font-extrabold">bajingan</p>
-        <button class="bg-black text-white px-3 py-1 rounded-full">See More</button>
+    <div class="w-[1536px] flex justify-between items-center py-3 px-4">
+        <div class="flex justify-start items-center gap-3 lg:gap-5 pr-2">
+            <img src="{{ URL::to('/') }}/img/pelabuhan_batamcenter.jpeg" class="w-32 lg:w-56" alt="ini gambar">
+            <p class="text-sm lg:text-lg font-extrabold">Batam Center Point</p>
+        </div>
+        <button class="bg-black text-white px-2 text-base lg:text-lg lg:px-3 py-1 rounded-full hover:bg-black/80">See More</button>
     </div>
 </div>
 <hr>

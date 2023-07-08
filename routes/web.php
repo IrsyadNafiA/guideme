@@ -54,6 +54,12 @@ Route::get('/seemore', function () {
     ]);
 });
 
+Route::get('/admin_login', function () {
+    return view('auth.login', [
+        "title" => "Admin Login"
+    ]);
+});
+
 Route::get('/homea', function () {
     #dd(Location::get(request()->ip()));
 

@@ -2,8 +2,9 @@
   <div>
     <h1 class="text-3xl font-black">Guide Me</h1>
   </div>
-  <div>
+  <div class="flex gap-1">
     <p>©Copyright 2023, All Rights Reserved by BKS</p>
+    <a href="/admin_login">Admin</a>
   </div>
   <div class="flex gap-4">
     {{-- <SocialIcon icon={GitHub} alt="GitHub" link="#" />

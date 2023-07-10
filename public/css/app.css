@@ -1005,6 +1005,10 @@ video {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1534,6 +1538,11 @@ body {
   .lg\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:text-4xl {

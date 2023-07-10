@@ -17,9 +17,9 @@
 
 <body>
     <div class="w-full h-screen flex justify-center items-center px-2">
-        <div class="bg-white py-5 px-7 rounded-lg shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)]">
-            <h3 class="text-center mt-2 mb-3 font-bold text-2xl drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">ADMIN LOGIN</h3>
-            <svg class="w-20 m-auto mb-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="bg-white py-5 lg:px-32 md:px-32 px-10 rounded-lg shadow-[0px_0px_4px_0px_rgba(0,0,0,0.25)]">
+            <h3 class="text-center lg:text-3xl text-2xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">ADMIN LOGIN</h3>
+            <svg class="w-20 m-auto mt-3 mb-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -31,13 +31,13 @@
             <form action="" class="flex flex-col gap-3 p-4">
                 <div class="flex flex-col">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Username" class="border-0 border-b-2 border-black focus:ring-0 focus:border-indigo-500 p-2">
+                    <input type="text" name="username" id="username" placeholder="Username" class="border-0 border-b-2 border-black focus:ring-0 focus:border-slate-400 p-2">
                 </div>
                 <div class="flex flex-col">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="●●●●●●●●" class="border-0 border-b-2 border-black focus:ring-0 focus:border-indigo-500 p-2 text-sm">
+                    <input type="password" name="password" id="password" placeholder="●●●●●●●●" class="border-0 border-b-2 border-black focus:ring-0 focus:border-slate-400 p-2 text-sm">
                 </div>
-                <button type="submit" class="w-fit px-4 py-2 m-auto mt-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white">Login</button>
+                <button type="submit" class="w-fit px-4 py-2 m-auto mt-2 rounded-lg bg-black hover:bg-slate-100 hover:text-black hover:border text-white">Login</button>
             </form>
         </div>
     </div>

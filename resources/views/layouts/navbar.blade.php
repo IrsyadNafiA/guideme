@@ -11,7 +11,7 @@
 </nav> -->
 
 
-<nav class="bg-white border-gray-200 dark:bg-white">
+<nav id="nav" class="nav bg-white border-gray-200 fixed w-full z-50 top-0">
     <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <h1 class='text-3xl font-black'>Guide Me</h1>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black" aria-controls="navbar-default" aria-expanded="false">
@@ -39,4 +39,27 @@
     </div>
 </nav>
 
+<style>
+    .nav.scrolled {
+        box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.12);
+    }
+</style>
+
+<script>
+    const nav = document.getElementById("nav");
+    window.onscroll = function() {
+        if (window.scrollY > 22) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    };
+
+    // $(function() {
+    //     $(document).scroll(function() {
+    //         const $nav = $(".nav");
+    //         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    //     });
+    // });
+</script>
 @yield('navbar')

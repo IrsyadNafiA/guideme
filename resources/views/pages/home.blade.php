@@ -61,19 +61,19 @@
                 </a>
             </div>
             <div class="rounded-lg flex text-center justify-center items-center relative">
-                <img class="w-[400px]" src="{{ URL::to('/') }}/img/bb.png" alt="beach">
+                <img class="w-[400px]" src="{{ URL::to('/') }}/img/barelang2.png" alt="beach">
                 <a href="/detail" class="bg-white py-3 px-8 hover:bg-black hover:text-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     BEACH
                 </a>
             </div>
             <div class="rounded-lg flex text-center justify-center items-center relative">
-                <img class="w-[400px]" src="{{ URL::to('/') }}/img/ocarina.png" alt="beach">
+                <img class="w-[400px]" src="{{ URL::to('/') }}/img/masjid1.png" alt="beach">
                 <a href="/detail" class="bg-white py-3 px-8 hover:bg-black hover:text-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     BEACH
                 </a>
             </div>
             <div class="rounded-lg flex text-center justify-center items-center relative">
-                <img class="w-[400px]" src="{{ URL::to('/') }}/img/deer.png" alt="beach">
+                <img class="w-[400px]" src="{{ URL::to('/') }}/img/rusa.png" alt="beach">
                 <a href="/detail" class="bg-white py-3 px-8 hover:bg-black hover:text-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     BEACH
                 </a>

@@ -3,8 +3,8 @@
 @section('main')
 
 <!-- This is an example component -->
-<div class="max-w-[1536px] mx-auto px-10">
-    <div class="max-w-[1480px] mb-10 mt-5">
+<div class="max-w-[1536px] mx-auto px-10 pt-20">
+    <div class="max-w-[1480px] mb-10">
         <div id="default-carousel" class="relative" data-carousel="static">
             <!-- Carousel wrapper -->
             <div class="overflow-hidden relative h-56 rounded-sm sm:h-64 xl:h-80 2xl:h-96">
@@ -49,8 +49,8 @@
         <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     </div>
 
-    <div class="flex my-10 justify-center items-center gap-16">
-        <iframe class="w-[25%] h-[280px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1673660516863!2d104.0011519738903!3d1.0350044625092114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcc244b3b3%3A0x910be76ffe84cd98!2sBarelang%2C%20Tembesi%2C%20Kec.%20Sagulung%2C%20Kota%20Batam%2C%20Kepulauan%20Riau%2029424!5e0!3m2!1sid!2sid!4v1688062565821!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="flex flex-col-reverse md:flex-row my-10 justify-center items-center gap-16">
+        <iframe class="w-full md:w-1/3 h-[280px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1673660516863!2d104.0011519738903!3d1.0350044625092114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcc244b3b3%3A0x910be76ffe84cd98!2sBarelang%2C%20Tembesi%2C%20Kec.%20Sagulung%2C%20Kota%20Batam%2C%20Kepulauan%20Riau%2029424!5e0!3m2!1sid!2sid!4v1688062565821!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div>
             <h1 class="text-center text-xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"> Barelang Bridge</h1>
             <p>Jl. Engku Putri No.1, Belian, Kec. Batam Kota, Kota Batam</p>
@@ -133,30 +133,21 @@
     <div class="items-center justify-center text-center">
         <h1 class="py-7 text-center text-4xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"> Transport Recomendations</h1>
         <div class="hover:bg-slate-100 border w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
-            <div class="w-[1280px] flex justify-between items-center py-5">
+            <div class="w-[1280px] flex flex-col md:flex-row justify-between items-center py-5 px-4">
                 <img src="{{ URL::to('/') }}/img/bus.png" alt="ini gambar" class="w-[150px]">
                 <p class="text-lg font-extrabold">Nuvasa beach, Nongsa</p>
-                <a href="/seemore">
-                    <button class="hover:bg-white hover:text-black hover:border-[1px] bg-black text-white px-3 py-1 rounded-full">See More</button>
-                </a>
             </div>
         </div>
         <div class="hover:bg-slate-100 border w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
-            <div class="w-[1280px] flex justify-between items-center py-5">
+            <div class="w-[1280px] flex flex-col md:flex-row justify-between items-center py-5 px-4">
                 <img src="{{ URL::to('/') }}/img/motor.png" alt="ini gambar" class="w-[150px]">
                 <p class="text-lg font-extrabold">Nuvasa beach, Nongsa</p>
-                <a href="/seemore">
-                    <button class="hover:bg-white hover:text-black hover:border-[1px] bg-black text-white px-3 py-1 rounded-full">See More</button>
-                </a>
             </div>
         </div>
         <div class="hover:bg-slate-100 border w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
-            <div class="w-[1280px] flex justify-between items-center py-5">
+            <div class="w-[1280px] flex flex-col md:flex-row justify-between items-center py-5 px-4">
                 <img src="{{ URL::to('/') }}/img/mobil.png" alt="ini gambar" class="w-[150px]">
                 <p class="text-lg font-extrabold">Nuvasa beach, Nongsa</p>
-                <a href="/seemore">
-                    <button class="hover:bg-white hover:text-black hover:border-[1px] bg-black text-white px-3 py-1 rounded-full">See More</button>
-                </a>
             </div>
         </div>
     </div>

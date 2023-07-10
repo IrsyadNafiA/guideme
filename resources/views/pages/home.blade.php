@@ -14,7 +14,7 @@
         <input type="text" id="lokasi" hidden>
     </div>
 </div>
-<div class="row mb-2">
+<div class="row mb-2 z-40 relative pt-16">
     <div class="col">
         <div id="map">
 

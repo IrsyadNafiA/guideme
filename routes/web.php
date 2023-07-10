@@ -60,6 +60,12 @@ Route::get('/admin_login', function () {
     ]);
 });
 
+Route::get('/admin_pages', function () {
+    return view('pages.admin', [
+        "title" => "Dashboard Admin"
+    ]);
+});
+
 Route::get('/homea', function () {
     #dd(Location::get(request()->ip()));
 

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
-<div class='flex items-center justify-center'>
+<div class='flex items-center justify-center pt-16'>
     <div class='flex flex-col items-center justify-center text-center max-w-6xl gap-5'>
         <h1 class="text-center mt-7 text-4xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">CONTACT US</h1>
         <p>Let’s connect We’re here to help, and we’d love to hear from you! Wheter you have a question, a comment, or just want to chat, you can reach out to us through the contact form on this page, or by phone, email, or social media.</p>

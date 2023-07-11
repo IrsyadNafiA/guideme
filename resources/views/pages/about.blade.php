@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
-<div class='flex items-center justify-center'>
+<div class='flex items-center justify-center pt-16'>
   <div class='flex flex-col items-center justify-center text-center max-w-6xl gap-5'>
     <div>
       <h1 class="text-center my-7 text-4xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">About</h1>

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
-<div class="flex flex-col items-center h">
+<div class="flex flex-col items-center pt-16">
     <h1 class="text-center my-7 text-4xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"> Here Our's Category</h1>
     <p class="text-center">Find which destination you like to go by look out the category below</p>
     <div class="rounded-lg mt-5 px-2 lg:px-0 flex text-center justify-center items-center relative">

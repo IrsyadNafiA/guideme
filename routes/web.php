@@ -60,8 +60,8 @@ Route::get('/admin_login', function () {
     ]);
 });
 
-Route::get('/admin_pages', function () {
-    return view('pages.admin', [
+Route::get('/dashboard', function () {
+    return view('admin.pages.index', [
         "title" => "Dashboard Admin"
     ]);
 });

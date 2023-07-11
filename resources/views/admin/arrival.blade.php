@@ -3,8 +3,8 @@
 @section('main')
 
 <div class="flex gap-16 justify-start mx-7 my-7">
-    <a href="/add_category" class="flex items-center justify-center w-48 h-16 rounded-2xl shadow-md bg-white border relative">
-        <p>Category</p>
+    <a href="/add_arrival" class="flex items-center justify-center w-48 h-16 rounded-2xl shadow-md bg-white border relative">
+        <p>Arrival Location</p>
     </a>
 </div>
 
@@ -26,7 +26,7 @@
                 </g>
             </g>
         </svg>
-        Add Category
+        Add Arrival
     </button>
 </div>
 
@@ -50,7 +50,10 @@
             <!-- Modal body -->
 
             <div class="mb-4 px-4 my-2">
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Category Tittle">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Arrival Tittle">
+            </div>
+            <div class="mb-4 px-4 my-2">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Maps">
             </div>
 
             <div class="flex items-center justify-center w-full">
@@ -91,7 +94,10 @@
                     Images
                 </th>
                 <th scope="col" class="px-6 py-3 font-black">
-                    Category
+                    Tittle
+                </th>
+                <th scope="col" class="px-6 py-3 font-black">
+                    Maps
                 </th>
                 <th scope="col" class="px-6 py-3 font-black">
                     Action
@@ -108,6 +114,9 @@
                 </td>
                 <td class="px-6 py-4">
                     Kuliner
+                </td>
+                <td class="px-6 py-4">
+                    Maps disini
                 </td>
                 <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

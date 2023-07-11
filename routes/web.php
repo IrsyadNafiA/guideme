@@ -72,6 +72,18 @@ Route::get('/add_category', function () {
     ]);
 });
 
+Route::get('/add_arrival', function () {
+    return view('admin.arrival', [
+        "title" => "Arrival Location Admin"
+    ]);
+});
+
+Route::get('/add_places', function () {
+    return view('admin.places', [
+        "title" => "Places Admin"
+    ]);
+});
+
 Route::get('/homea', function () {
     #dd(Location::get(request()->ip()));
 

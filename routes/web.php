@@ -61,7 +61,7 @@ Route::get('/admin_login', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('admin.pages.index', [
+    return view('admin.index', [
         "title" => "Dashboard Admin"
     ]);
 });

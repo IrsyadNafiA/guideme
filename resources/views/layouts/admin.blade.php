@@ -16,10 +16,11 @@
 </head>
 
 <body>
-    @include('layouts.sidebar')
-    <div class="relative min-h-[100vh]">
+    <div class="relative min-h-[100vh] flex gap-2">
+        @include('layouts.sidebar')
         <div class="pb-10 w-full">
             @yield('main')
+            <p class="text-sm absolute right-3 text-gray-500 bottom-0">Copyright © 2023 Bismillah ke Surabaya | BKS. All rights reserved</p>
         </div>
     </div>
 </body>

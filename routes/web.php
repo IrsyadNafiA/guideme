@@ -66,6 +66,12 @@ Route::get('/dashboard', function () {
     ]);
 });
 
+Route::get('/add_category', function () {
+    return view('admin.category', [
+        "title" => "Category Admin"
+    ]);
+});
+
 Route::get('/homea', function () {
     #dd(Location::get(request()->ip()));
 

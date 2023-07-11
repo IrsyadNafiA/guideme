@@ -19,6 +19,7 @@
     <div class="relative min-h-[100vh] flex gap-2">
         @include('layouts.sidebar')
         <div class="pb-10 w-full">
+            @include('layouts.top_admin')
             @yield('main')
             <p class="text-sm absolute right-3 text-gray-500 bottom-0">Copyright © 2023 Bismillah ke Surabaya | BKS. All rights reserved</p>
         </div>

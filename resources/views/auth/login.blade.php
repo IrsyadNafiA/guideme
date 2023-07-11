@@ -37,7 +37,7 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="●●●●●●●●" class="border-0 border-b-2 border-black focus:ring-0 focus:border-slate-400 p-2 text-sm">
                 </div>
-                <a href="/admin_pages" type="submit" class="w-fit px-4 py-2 m-auto mt-2 rounded-lg bg-black hover:bg-slate-100 hover:text-black hover:border text-white">Login</a>
+                <a href="/dashboard" type="submit" class="w-fit px-4 py-2 m-auto mt-2 rounded-lg bg-black hover:bg-slate-100 hover:text-black hover:border text-white">Login</a>
             </form>
         </div>
     </div>

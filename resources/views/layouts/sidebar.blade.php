@@ -1,4 +1,4 @@
-<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
     <span class="sr-only">Open sidebar</span>
     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
@@ -6,7 +6,7 @@
 </button>
 
 <aside id="logo-sidebar" class="w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-white shadow-lg dark:bg-gray-800">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-white shadow-lg">
         <a href="https://flowbite.com/" class="flex items-center pl-2.5">
             <svg width="40" height="40" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M57.1875 41.25C57.1875 42.4932 56.6936 43.6855 55.8146 44.5646C54.9355 45.4436 53.7432 45.9375 52.5 45.9375C51.2568 45.9375 50.0645 45.4436 49.1854 44.5646C48.3064 43.6855 47.8125 42.4932 47.8125 41.25C47.8125 40.0068 48.3064 38.8145 49.1854 37.9354C50.0645 37.0564 51.2568 36.5625 52.5 36.5625C53.7432 36.5625 54.9355 37.0564 55.8146 37.9354C56.6936 38.8145 57.1875 40.0068 57.1875 41.25ZM75 37.5C75 58.125 58.125 75 37.5 75H0V37.5C0 16.875 16.875 0 37.5 0C58.125 0 75 16.875 75 37.5ZM18.75 60C24.0375 64.6125 30 67.5 37.5 67.5C54.0375 67.5 67.5 54.0375 67.5 37.5C67.5 34.5375 67.05 31.6875 66.2625 29.025C63.5625 29.6625 60.75 30 57.825 30C50.325 30 43.3875 27.75 37.5 23.9625C37.5 23.9625 32.025 44.1 22.6125 41.25C20.1375 40.5 18.75 42.4125 18.75 45" fill="black" />
@@ -18,8 +18,8 @@
         <hr class=" lg:bg-black mb-4">
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                <a href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <svg class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                         <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
                         <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                     </svg>
@@ -28,8 +28,8 @@
             </li>
             <hr class=" lg:bg-black">
             <li>
-                <a href="/add_category" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                <a href="/add_category" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
                         <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
                     </svg>
                     <span class="flex-1 ml-3 whitespace-nowrap">Category</span>
@@ -38,7 +38,7 @@
             <hr class=" lg:bg-black">
 
             <li>
-                <a href="/add_arrival" class="flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <a href="/add_arrival" class="flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg hover:bg-gray-100 group">
                     <svg class="w-7" viewBox="-0.32 -0.32 32.53 32.53" xmlns="http://www.w3.org/2000/svg" stroke-width="0.605853">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -55,7 +55,7 @@
             <hr class=" lg:bg-black">
 
             <li>
-                <a href="/add_places" class="flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <a href="/add_places" class="flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg hover:bg-gray-100 group">
                     <svg class="w-6" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 466.583 466.582" xml:space="preserve">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

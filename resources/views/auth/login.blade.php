@@ -28,7 +28,8 @@
                     <path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path>
                 </g>
             </svg>
-            <form action="" class="flex flex-col gap-3 p-4">
+            <form action="{{url('proses_login')}}" method="POST" class="flex flex-col gap-3 p-4">
+                @csrf
                 <div class="flex flex-col">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Username" class="border-0 border-b-2 border-black focus:ring-0 focus:border-slate-400 p-2">
@@ -37,7 +38,7 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="●●●●●●●●" class="border-0 border-b-2 border-black focus:ring-0 focus:border-slate-400 p-2 text-sm">
                 </div>
-                <a href="/dashboard" type="submit" class="w-fit px-4 py-2 m-auto mt-2 rounded-lg bg-black hover:bg-slate-100 hover:text-black hover:border text-white">Login</a>
+                <button class="w-fit px-4 py-2 m-auto mt-2 rounded-lg bg-black hover:bg-slate-100 hover:text-black hover:border text-white" type="submit">Login</button>
             </form>
         </div>
     </div>

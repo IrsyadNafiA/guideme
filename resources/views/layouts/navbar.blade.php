@@ -22,17 +22,17 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
-                <li>
-                    <a href="/home" class="block py-2 pl-3 pr-4 text-black font-extrabold rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
+                <li class="{{ Request::is('home') ? 'active: text-gray-500' : '' }}">
+                    <a href="/home" class="block py-2 pl-3 pr-4 font-extrabold rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
                 </li>
-                <li>
-                    <a href="/category" class="block py-2 pl-3 pr-4 text-black font-extrabold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-200 dark:hover:text-black md:dark:hover:bg-transparent">Category</a>
+                <li class="{{ Request::is('category') ? 'active: text-gray-500' : '' }}">
+                    <a href="/category" class="block py-2 pl-3 pr-4 font-extrabold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-200 dark:hover:text-black md:dark:hover:bg-transparent">Category</a>
                 </li>
-                <li>
-                    <a href="/about" class="block py-2 pl-3 pr-4 text-black font-extrabold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-200 dark:hover:text-black md:dark:hover:bg-transparent">About</a>
+                <li class="{{ Request::is('about') ? 'active: text-gray-500' : '' }}">
+                    <a href="/about" class="block py-2 pl-3 pr-4 font-extrabold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-200 dark:hover:text-black md:dark:hover:bg-transparent">About</a>
                 </li>
-                <li>
-                    <a href="/contact" class="block py-2 pl-3 pr-4 text-black font-extrabold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-200 dark:hover:text-black md:dark:hover:bg-transparent">Contact</a>
+                <li class="{{ Request::is('contact') ? 'active: text-gray-500' : '' }}">
+                    <a href="/contact" class="block py-2 pl-3 pr-4 font-extrabold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-200 dark:hover:text-black md:dark:hover:bg-transparent">Contact</a>
                 </li>
             </ul>
         </div>

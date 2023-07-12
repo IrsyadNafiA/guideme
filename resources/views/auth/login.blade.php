@@ -30,6 +30,14 @@
             </svg>
             <form action="{{url('proses_login')}}" method="POST" class="flex flex-col gap-3 p-4">
                 @csrf
+                @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{session('error')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
                 <div class="flex flex-col">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Username" class="border-0 border-b-2 border-black focus:ring-0 focus:border-slate-400 p-2">

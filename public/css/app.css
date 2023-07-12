@@ -729,6 +729,9 @@ video {
 .h-8 {
   height: 2rem;
 }
+.h-80 {
+  height: 20rem;
+}
 .h-\[280px\] {
   height: 280px;
 }
@@ -751,12 +754,15 @@ video {
 .h-screen {
   height: 100vh;
 }
+<<<<<<< HEAD
 .h-4 {
   height: 1rem;
 }
 .h-80 {
   height: 20rem;
 }
+=======
+>>>>>>> origin/irsyad
 .max-h-full {
   max-height: 100%;
 }
@@ -820,6 +826,9 @@ video {
 .w-\[1536px\] {
   width: 1536px;
 }
+.w-\[240px\] {
+  width: 240px;
+}
 .w-\[400px\] {
   width: 400px;
 }
@@ -836,12 +845,15 @@ video {
 .w-full {
   width: 100%;
 }
+<<<<<<< HEAD
 .w-4 {
   width: 1rem;
 }
 .w-\[240px\] {
   width: 240px;
 }
+=======
+>>>>>>> origin/irsyad
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -901,9 +913,6 @@ video {
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.flex-row {
-  flex-direction: row;
 }
 .flex-col {
   flex-direction: column;
@@ -1241,8 +1250,13 @@ video {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
-.text-\[60px\] {
-  font-size: 60px;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .text-lg {
   font-size: 1.125rem;
@@ -1260,6 +1274,7 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+<<<<<<< HEAD
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1268,6 +1283,8 @@ video {
   font-size: 3.75rem;
   line-height: 1;
 }
+=======
+>>>>>>> origin/irsyad
 .font-black {
   font-weight: 900;
 }
@@ -1621,6 +1638,11 @@ body {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.active\:bg-red-600:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 .active\:text-gray-500:active {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1631,9 +1653,15 @@ body {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
+<<<<<<< HEAD
 .active\:text-red-500:active {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+=======
+.active\:text-red-600:active {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+>>>>>>> origin/irsyad
 }
 
 .group:hover .group-hover\:bg-white\/50 {
@@ -1858,18 +1886,21 @@ body {
     width: 33.333333%;
   }
 
-  .md\:w-auto {
-    width: auto;
-  }
-
   .md\:w-\[480px\] {
     width: 480px;
   }
 
+  .md\:w-auto {
+    width: auto;
+  }
+
+<<<<<<< HEAD
+=======
   .md\:flex-row {
     flex-direction: row;
   }
 
+>>>>>>> origin/irsyad
   .md\:gap-5 {
     gap: 1.25rem;
   }

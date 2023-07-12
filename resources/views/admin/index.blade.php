@@ -15,6 +15,7 @@
         <h1 class="my-3 mx-4 text-end lg:text-4xl text-sm font-black absolute top-0 right-0">126</h1>
         <p>Places</p>
     </a>
+ 
 </div>
 
 @endsection

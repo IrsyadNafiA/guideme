@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Stevebauman\Location\Facades\Location;
 
@@ -13,6 +16,25 @@ use Stevebauman\Location\Facades\Location;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// routes login
+Route::get('login',[AuthController::class,'index'])->name('login');
+Route::post('proses_login',[AuthController::class,'proses_login'])->name('proses_login');
+Route::get('logout', [AuthController::class,'logout'])->name('logout');
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => 'Cek_login:admin'], function() {
+        Route::get('admin', [AdminController::class, 'dashboard1'])->name('admin');
+    });
+
+    Route::group(['middleware' => 'Cek_login:user'], function() {
+        Route::get('user', [UserController::class, 'dashboard1'])->name('user');
+    });
+});
+// end login
+
+
 
 Route::get('/', function () {
     return view('welcome');

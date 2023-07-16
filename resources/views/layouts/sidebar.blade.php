@@ -71,7 +71,7 @@
             <hr class=" lg:bg-black">
 
             <li>
-                <a href="{{url('logout')}}" class="flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <a href="{{url('logout')}}" class="flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg hover:bg-gray-100 group">
                     <svg class="w-7" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

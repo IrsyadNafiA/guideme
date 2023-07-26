@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Stevebauman\Location\Facades\Location;
@@ -71,11 +72,15 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/contact', function () {
-    return view('pages.contact', [
-        "title" => "Contact"
-    ]);
-});
+// Route::get('/contact', function () {
+//     return view('pages.contact', [
+//         "title" => "Contact"
+//     ]);
+// });
+
+Route::get('/contact', [ContactController::class, 'index'])->name('/contact');
+Route::post('store_contact', [ContactController::class, 'store'])->name('store_contact');
+
 
 Route::get('/seemore', function () {
     return view('pages.seemore', [

@@ -20,8 +20,12 @@ class UserController extends Controller
 
     public function categoryDetail($id_kategori)
     {
-        $data = Category::find($id_kategori)->first();
+        $data = Category::find($id_kategori);
         // dd($data);
-        return view('pages.detail', ['data' => $data], ["title" => "Detail"]);
+        if ($data !== null) {
+            return view('pages.detail', ['data' => $data], ["title" => "Detail"]);
+        } else {
+            return "Category Not Found";
+        }
     }
 }

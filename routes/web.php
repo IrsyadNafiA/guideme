@@ -62,7 +62,7 @@ Route::get('/home', function () {
 // });
 
 Route::get('/category', [UserController::class, 'category'])->name('/category');
-Route::get('/category/detail/{id}', [UserController::class, 'categoryDetail'])->name('/category/detail/{id}');
+Route::get('/category/detail/{id_kategori}', [UserController::class, 'categoryDetail'])->name('/category/detail/{id_kategori}');
 
 
 Route::get('/about', function () {

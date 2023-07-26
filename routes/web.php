@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Stevebauman\Location\Facades\Location;
@@ -25,7 +26,11 @@ Route::get('logout', [AuthController::class,'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => 'Cek_login:admin'], function() {
-        Route::get('admin', [AdminController::class, 'dashboard1'])->name('admin');
+        Route::get('admin/dashboard', [AdminController::class, 'dashboard1'])->name('admin/dashboard');
+        
+        Route::get('admin/category', [AdminController::class, 'category'])->name('admin/category');
+        Route::post('admin/add_category', [AdminController::class, 'store_category'])->name('admin/add_category');
+        Route::match(['get','post'], '/edit_category{id}', [AdminController::class, 'editgetcategory'])->name('/edit_category{id}');
     });
 
     Route::group(['middleware' => 'Cek_login:user'], function() {

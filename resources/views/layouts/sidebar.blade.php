@@ -12,13 +12,13 @@
                 <path d="M57.1875 41.25C57.1875 42.4932 56.6936 43.6855 55.8146 44.5646C54.9355 45.4436 53.7432 45.9375 52.5 45.9375C51.2568 45.9375 50.0645 45.4436 49.1854 44.5646C48.3064 43.6855 47.8125 42.4932 47.8125 41.25C47.8125 40.0068 48.3064 38.8145 49.1854 37.9354C50.0645 37.0564 51.2568 36.5625 52.5 36.5625C53.7432 36.5625 54.9355 37.0564 55.8146 37.9354C56.6936 38.8145 57.1875 40.0068 57.1875 41.25ZM75 37.5C75 58.125 58.125 75 37.5 75H0V37.5C0 16.875 16.875 0 37.5 0C58.125 0 75 16.875 75 37.5ZM18.75 60C24.0375 64.6125 30 67.5 37.5 67.5C54.0375 67.5 67.5 54.0375 67.5 37.5C67.5 34.5375 67.05 31.6875 66.2625 29.025C63.5625 29.6625 60.75 30 57.825 30C50.325 30 43.3875 27.75 37.5 23.9625C37.5 23.9625 32.025 44.1 22.6125 41.25C20.1375 40.5 18.75 42.4125 18.75 45" fill="black" />
             </svg>
             <span>
-                <h1 class="text-center my-7 lg:text-lg text-sm font-black ml-3 ">{{ Auth::user()->level }}</h1>
+                <h1 class="text-center my-7 lg:text-lg text-sm font-black ml-3 ">{{ Auth::user()->name }}</h1>
             </span>
         </a>
         <hr class=" lg:bg-black mb-4">
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="/dashboard" class="{{ Request::is('dashboard') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                <a href="{{route('admin/dashboard')}}" class="{{ Request::is('admin/dashboard') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
                     <svg class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                         <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
                         <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
@@ -28,7 +28,7 @@
             </li>
             <hr class=" lg:bg-black">
             <li>
-                <a href="/add_category" class="{{ Request::is('add_category') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                <a href="{{route('admin/category')}}" class="{{ Request::is('add_category') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
                         <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
                     </svg>

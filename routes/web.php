@@ -19,27 +19,25 @@ use Stevebauman\Location\Facades\Location;
 */
 
 // routes login
-Route::get('login',[AuthController::class,'index'])->name('login');
-Route::post('proses_login',[AuthController::class,'proses_login'])->name('proses_login');
-Route::get('logout', [AuthController::class,'logout'])->name('logout');
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('proses_login', [AuthController::class, 'proses_login'])->name('proses_login');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::group(['middleware' => 'Cek_login:admin'], function() {
+    Route::group(['middleware' => 'Cek_login:admin'], function () {
         Route::get('admin/dashboard', [AdminController::class, 'dashboard1'])->name('admin/dashboard');
-        
+
         Route::get('admin/category', [AdminController::class, 'category'])->name('admin/category');
         Route::post('admin/add_category', [AdminController::class, 'store_category'])->name('admin/add_category');
-        Route::match(['get','post'], '/edit_category{id}', [AdminController::class, 'editgetcategory'])->name('/edit_category{id}');
+        Route::match(['get', 'post'], '/edit_category{id}', [AdminController::class, 'editgetcategory'])->name('/edit_category{id}');
     });
 
-    Route::group(['middleware' => 'Cek_login:user'], function() {
+    Route::group(['middleware' => 'Cek_login:user'], function () {
         Route::get('user', [UserController::class, 'dashboard1'])->name('user');
     });
 });
 // end login
-
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,11 +49,21 @@ Route::get('/home', function () {
     ]);
 });
 
-Route::get('/category', function () {
-    return view('pages.category', [
-        "title" => "Category"
-    ]);
-});
+// Route::get('/category', function () {
+//     return view('pages.category', [
+//         "title" => "Category"
+//     ]);
+// });
+
+// Route::get('/detail', function () {
+//     return view('pages.detail', [
+//         "title" => "Details"
+//     ]);
+// });
+
+Route::get('/category', [UserController::class, 'category'])->name('/category');
+Route::get('/category/detail/{id}', [UserController::class, 'categoryDetail'])->name('/category/detail/{id}');
+
 
 Route::get('/about', function () {
     return view('pages.about', [
@@ -66,12 +74,6 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('pages.contact', [
         "title" => "Contact"
-    ]);
-});
-
-Route::get('/detail', function () {
-    return view('pages.detail', [
-        "title" => "Details"
     ]);
 });
 

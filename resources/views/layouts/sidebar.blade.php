@@ -55,7 +55,7 @@
             <hr class=" lg:bg-black">
 
             <li>
-                <a href="/add_places" class="{{ Request::is('addpl') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg hover:bg-gray-100 group">
+                <a href="{{route('admin/places')}}" class="{{ Request::is('admin/places') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg hover:bg-gray-100 group">
                     <svg class="w-6" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 466.583 466.582" xml:space="preserve">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

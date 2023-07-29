@@ -4,7 +4,7 @@
 <div class='flex items-center justify-center pt-16'>
     <div class='flex flex-col items-center justify-center text-center max-w-6xl gap-5'>
         @if(session('status'))
-        <div class="bg-green-100 text-green-600 w-full p-4 z-50 mt-7 rounded-lg">
+        <div class="bg-green-100 text-green-600 w-full p-4 mt-7 rounded-lg">
             {{ session('status') }}
         </div>
         @endif
@@ -21,16 +21,16 @@
                 <div class="flex justify-between">
                     <div class="flex flex-col items-start">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" class="w-56 py-2 px-2 rounded-lg outline outline-2 outline-black" method="post">
+                        <input type="text" name="name" id="name" placeholder="Your Name" class="w-56 py-2 px-2 rounded-lg outline outline-2 outline-black" method="post" required>
                     </div>
                     <div class="flex flex-col items-start">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="email@emal.com" class="w-56 py-2 px-2 rounded-lg outline outline-2 outline-black">
+                        <input type="email" name="email" id="email" placeholder="email@emal.com" class="w-56 py-2 px-2 rounded-lg outline outline-2 outline-black" required>
                     </div>
                 </div>
                 <div class="flex flex-col items-start">
                     <label for="description">Description</label>
-                    <textarea class="w-full py-2 px-2 rounded-lg outline outline-2 outline-black" name="description" id="description" cols="30" rows="10" placeholder="Enter your text"></textarea>
+                    <textarea class="w-full py-2 px-2 rounded-lg outline outline-2 outline-black" name="description" id="description" cols="30" rows="10" placeholder="Enter your text" required></textarea>
                 </div>
                 <button type="submit" class="w-32 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black hover:outline hover:outline-2 hover:outline-black m-auto">SUBMIT</button>
             </form>

@@ -88,13 +88,10 @@ Route::get('/about', function () {
 
 Route::get('/contact', [ContactController::class, 'index'])->name('/contact');
 Route::post('store_contact', [ContactController::class, 'store'])->name('store_contact');
+Route::get('/place{id}', [UserController::class, 'placedetail'])->name('/place{id}');
 
 
-Route::get('/seemore', function () {
-    return view('pages.seemore', [
-        "title" => "See More"
-    ]);
-});
+
 
 Route::get('/admin_login', function () {
     return view('auth.login', [

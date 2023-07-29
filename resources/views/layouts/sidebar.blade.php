@@ -5,7 +5,7 @@
     </svg>
 </button>
 
-<aside id="logo-sidebar" class="w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<aside id="logo-sidebar" class="w-64 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-white shadow-lg">
         <a href="https://flowbite.com/" class="flex items-center pl-2.5">
             <svg width="40" height="40" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">

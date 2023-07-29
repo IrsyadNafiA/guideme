@@ -33,13 +33,14 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('admin/category', [AdminController::class, 'category'])->name('admin/category');
         Route::post('admin/add_category', [AdminController::class, 'store_category'])->name('admin/add_category');
         Route::match(['get', 'post'], '/edit_category{id}', [AdminController::class, 'editgetcategory'])->name('/edit_category{id}');
-        Route::match(['get','post'], '/edit_category{id}', [AdminController::class, 'editgetcategory'])->name('/edit_category{id}');
-        Route::match(['get','post', 'delete'],'/delete_category{id}', [AdminController::class, 'deletecategory'])->name('/delete_category{id}');
+        Route::match(['get', 'post', 'delete'], '/delete_category{id}', [AdminController::class, 'deletecategory'])->name('/delete_category{id}');
 
         Route::get('admin/places', [AdminController::class, 'places'])->name('admin/places');
         Route::post('admin/add_places', [AdminController::class, 'store_places'])->name('admin/add_places');
-        Route::match(['get','post'], '/edit_places{id}', [AdminController::class, 'editplaces'])->name('/edit_places{id}');
+        Route::match(['get', 'post'], '/edit_places{id}', [AdminController::class, 'editplaces'])->name('/edit_places{id}');
 
+
+        Route::get('admin/arrival', [AdminController::class, 'arrival'])->name('admin/arrival');
     });
 
     Route::group(['middleware' => 'Cek_login:user'], function () {

@@ -17,8 +17,12 @@ class places extends Model
         'id_category',
     ];
 
-    public function category (){
+    public function category()
+    {
         return $this->belongsTo(Category::class, 'id_category', 'id_category');
     }
-
+    public function arrival()
+    {
+        return $this->belongsTo(Arrival::class, 'id_arrival', 'id_arrival');
+    }
 }

@@ -14,13 +14,13 @@
                     <img src="{{ asset('images/'.$data->image)}}" alt="barelang" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
-                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="{{ URL::to('/') }}/img/barelang2.jpg" alt="barelang" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="{{ URL::to('/') }}/img/barelang1.jpg" alt="barelang" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                </div> 
+                </div>
             </div>
             <!-- Slider indicators -->
             <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
@@ -50,9 +50,9 @@
     </div>
 
     <div class="flex flex-col-reverse md:flex-row my-10 justify-center items-center gap-16">
-        <iframe class="w-full md:w-1/3 h-[280px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1673660516863!2d104.0011519738903!3d1.0350044625092114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcc244b" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="w-full md:w-1/3 h-[280px]" src="https://www.google.com/maps/embed?{{ $data -> maps }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div>
-            <h1 class="text-center text-xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"> Barelang Bridge</h1>
+            <h1 class="text-center text-xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">{{ $data -> title }}</h1>
             <p>Jl. Engku Putri No.1, Belian, Kec. Batam Kota, Kota Batam</p>
             <div class="flex text-center justify-center items-center">
                 <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -122,32 +122,26 @@
     </div>
     <div class="items-center justify-center text-center">
         <h1 class="text-center text-4xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"> History</h1>
-        <p class="my-7 mx-[10%] text-center">Barelang is a bridge located in Batam,
-            Riau Archipelago Province. The uniqueness of the Barelang Bridge is the bridge connected into one unit Barelang Naming
-            is an abbreviation of Batam, Rempang, and Galang. Bridge
-            connecting a number of islands in the Riau Archipelago Province, namely Batam Island,
-            Watch Island, Nipah Island, Rempang Island, Galang Island, and Galang Baru Island.
-            The bridge which is the Icon of Batam City and the Landmark of Batam Island is known as
-            Habibie Bridge, because the bridge was initiated by BJ Habibie, the 3rd President of the Republic of Indonesia.</p>
+        <p class="my-7 mx-[10%] text-center">{{ $data -> description }}</p>
     </div>
     <div class="items-center justify-center text-center">
         <h1 class="py-7 text-center text-4xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"> Transport Recomendations</h1>
         <div class="hover:bg-slate-100 border w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
             <div class="w-[1280px] flex flex-col md:flex-row justify-between items-center py-5 px-4">
                 <img src="{{ URL::to('/') }}/img/bus.png" alt="ini gambar" class="w-[150px]">
-                <p class="text-lg font-extrabold">Nuvasa beach, Nongsa</p>
+                <p class="text-lg font-extrabold">{{ $data -> title }}</p>
             </div>
         </div>
         <div class="hover:bg-slate-100 border w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
             <div class="w-[1280px] flex flex-col md:flex-row justify-between items-center py-5 px-4">
                 <img src="{{ URL::to('/') }}/img/motor.png" alt="ini gambar" class="w-[150px]">
-                <p class="text-lg font-extrabold">Nuvasa beach, Nongsa</p>
+                <p class="text-lg font-extrabold">{{ $data -> title }}</p>
             </div>
         </div>
         <div class="hover:bg-slate-100 border w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
             <div class="w-[1280px] flex flex-col md:flex-row justify-between items-center py-5 px-4">
                 <img src="{{ URL::to('/') }}/img/mobil.png" alt="ini gambar" class="w-[150px]">
-                <p class="text-lg font-extrabold">Nuvasa beach, Nongsa</p>
+                <p class="text-lg font-extrabold">{{ $data -> title }}</p>
             </div>
         </div>
     </div>

@@ -82,7 +82,6 @@
     </div>
 </div>
 
-
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500">
         <thead class="text-xs text-gray-700 uppercase bg-gray-100">
@@ -97,32 +96,39 @@
                     Title
                 </th>
                 <th scope="col" class="px-6 py-3 font-black">
-                    Maps
+                    Address
                 </th>
                 <th scope="col" class="px-6 py-3 font-black">
                     Action
                 </th>
             </tr>
         </thead>
+        @php
+        $a=1;
+        @endphp
         <tbody>
+            @if ($arrivalm->count() > 0)
+            @foreach ($arrivalm as $item)
             <tr class="bg-white border-b">
                 <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    1
+                    {{$a++}}
                 </td>
                 <td class="px-6 py-4">
-                    Gambar Kuliner
+                    {{$item->images}}
                 </td>
                 <td class="px-6 py-4">
-                    Hang Nadim
+                    {{$item->title}}
                 </td>
                 <td class="px-6 py-4">
-                    disini
+                    {{$item->address}}
                 </td>
                 <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
                     <a href="#" class="ml-4 font-medium text-red-600 hover:underline">Delete</a>
                 </td>
             </tr>
+            @endforeach
+            @endif
         </tbody>
     </table>
 </div>

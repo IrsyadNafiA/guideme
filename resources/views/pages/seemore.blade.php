@@ -11,16 +11,16 @@
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                    <img src="{{ URL::to('/') }}/img/barelang1.jpg" alt="barelang" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                    <img src="{{ asset('images/'.$data->image)}}" alt="barelang" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="{{ URL::to('/') }}/img/barelang2.jpg" alt="barelang" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="{{ URL::to('/') }}/img/barelang1.jpg" alt="barelang" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                </div>
+                </div> 
             </div>
             <!-- Slider indicators -->
             <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
@@ -50,7 +50,7 @@
     </div>
 
     <div class="flex flex-col-reverse md:flex-row my-10 justify-center items-center gap-16">
-        <iframe class="w-full md:w-1/3 h-[280px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1673660516863!2d104.0011519738903!3d1.0350044625092114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcc244b3b3%3A0x910be76ffe84cd98!2sBarelang%2C%20Tembesi%2C%20Kec.%20Sagulung%2C%20Kota%20Batam%2C%20Kepulauan%20Riau%2029424!5e0!3m2!1sid!2sid!4v1688062565821!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="w-full md:w-1/3 h-[280px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1673660516863!2d104.0011519738903!3d1.0350044625092114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcc244b" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div>
             <h1 class="text-center text-xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"> Barelang Bridge</h1>
             <p>Jl. Engku Putri No.1, Belian, Kec. Batam Kota, Kota Batam</p>

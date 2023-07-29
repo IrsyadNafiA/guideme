@@ -9,10 +9,17 @@ class Category extends Model
 {
     use HasFactory;
     
-    protected $table = "categories";
     protected $primaryKey = "id_category";
     protected $fillable = [
         'category',
         'image',
+
+       
     ];
+
+    public function places() {
+        return $this->hasMany(places::class);
+    }
+
+    
 }

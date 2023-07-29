@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 use Stevebauman\Location\Facades\Location;
 
@@ -32,6 +33,13 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('admin/category', [AdminController::class, 'category'])->name('admin/category');
         Route::post('admin/add_category', [AdminController::class, 'store_category'])->name('admin/add_category');
         Route::match(['get', 'post'], '/edit_category{id}', [AdminController::class, 'editgetcategory'])->name('/edit_category{id}');
+        Route::match(['get','post'], '/edit_category{id}', [AdminController::class, 'editgetcategory'])->name('/edit_category{id}');
+        Route::match(['get','post', 'delete'],'/delete_category{id}', [AdminController::class, 'deletecategory'])->name('/delete_category{id}');
+
+        Route::get('admin/places', [AdminController::class, 'places'])->name('admin/places');
+        Route::post('admin/add_places', [AdminController::class, 'store_places'])->name('admin/add_places');
+        Route::match(['get','post'], '/edit_places{id}', [AdminController::class, 'editplaces'])->name('/edit_places{id}');
+
     });
 
     Route::group(['middleware' => 'Cek_login:user'], function () {
@@ -80,13 +88,10 @@ Route::get('/about', function () {
 
 Route::get('/contact', [ContactController::class, 'index'])->name('/contact');
 Route::post('store_contact', [ContactController::class, 'store'])->name('store_contact');
+Route::get('/place{id}', [UserController::class, 'placedetail'])->name('/place{id}');
 
 
-Route::get('/seemore', function () {
-    return view('pages.seemore', [
-        "title" => "See More"
-    ]);
-});
+
 
 Route::get('/admin_login', function () {
     return view('auth.login', [

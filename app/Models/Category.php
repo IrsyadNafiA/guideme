@@ -8,18 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-    
+
     protected $primaryKey = "id_category";
     protected $fillable = [
         'category',
         'image',
-
-       
     ];
 
-    public function places() {
+    public function places()
+    {
         return $this->hasMany(places::class);
     }
-
-    
 }

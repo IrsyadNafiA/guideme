@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
         Route::get('admin/arrival', [AdminController::class, 'arrival'])->name('admin/arrival');
+        Route::post('admin/add_arrival', [AdminController::class, 'store_arrival'])->name('admin/add_arrival');
     });
 
     Route::group(['middleware' => 'Cek_login:user'], function () {
@@ -53,11 +54,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('pages.home', [
-        "title" => "Home"
-    ]);
-});
+// Route::get('/home', function () {
+//     return view('pages.home', [
+//         "title" => "Home"
+//     ]);
+// });
+
+Route::get('/home', [UserController::class, 'home'])->name('/home');
+Route::get('/arrival/detail/{id_arrival}', [UserController::class, 'arrival'])->name('/arrival/detail/{id_arrival}');
 
 // Route::get('/category', function () {
 //     return view('pages.category', [

@@ -30,7 +30,7 @@
     </button>
 </div>
 
-<!-- Main modal -->
+<!-- Add Arrival modal -->
 <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
@@ -48,36 +48,35 @@
                 </button>
             </div>
             <!-- Modal body -->
+            <form action="{{route('admin/add_arrival')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="mb-4 px-4 my-2">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" name="title" type="text" placeholder="Arrival Location">
+                </div>
+                <div class="mb-4 px-4 my-2">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" name="address" type="text" placeholder="Address Location">
+                </div>
 
-            <div class="mb-4 px-4 my-2">
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" name="title" type="text" placeholder="Arrival Location">
-            </div>
-            <div class="mb-4 px-4 my-2">
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="map" name="map" type="text" placeholder="Map Location">
-            </div>
+                <div class="flex items-center justify-center w-full">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                            </svg>
+                            <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                            <p class="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" name="image" required />
+                    </label>
+                </div>
 
-            <div class="flex items-center justify-center w-full">
-                <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
-                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                        <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                        </svg>
-                        <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-                        <p class="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                    </div>
-                    <input id="dropzone-file" type="file" class="hidden" />
-                </label>
-            </div>
-
-            <!-- Modal footer -->
-            <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
-                <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="w-20 justify-center inline-flex text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-3 py-2.5 text-center items-center mr-2 mb-2" type=" button">
-                    Add
-                </button>
-                <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="w-20 justify-center inline-flex text-black bg-slate-200 border hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-3 py-2.5 text-center items-center mr-2 mb-2" type=" button">
-                    Cancel
-                </button>
-            </div>
+                <!-- Modal footer -->
+                <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
+                    <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="w-20 justify-center inline-flex text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-3 py-2.5 text-center items-center mr-2 mb-2" type=" button">
+                        Add
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -114,7 +113,7 @@
                     {{$a++}}
                 </td>
                 <td class="px-6 py-4">
-                    {{$item->images}}
+                    {{$item->image}}
                 </td>
                 <td class="px-6 py-4">
                     {{$item->title}}

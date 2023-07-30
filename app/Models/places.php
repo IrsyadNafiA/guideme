@@ -15,6 +15,9 @@ class places extends Model
         'maps',
         'description',
         'id_category',
+        'id_arrival',
+        'koordinat_1',
+        'koordinat_2',
     ];
 
     public function category()

@@ -23,29 +23,20 @@
 </div>
 <div class="container mx-auto">
     <h1 class="text-center my-7 lg:text-4xl text-2xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Arrival Location</h1>
+    @foreach ($arrivalm as $item)
     <div class="border hover:bg-slate-100 w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
         <div class="w-full flex justify-between items-center py-3 px-4">
             <div class="flex justify-start items-center gap-3 lg:gap-5 pr-2">
-                <img src="{{ URL::to('/') }}/img/pelabuhan_batamcenter.jpeg" class="w-32 lg:w-56" alt="ini gambar">
-                <p class="text-sm lg:text-lg font-extrabold">Batam Center Point</p>
+                <img src="{{ asset('images/'.$item->image)}}" class="w-32 lg:w-56" alt="{{ $item-> title }}">
+                <p class="text-sm lg:text-lg font-extrabold">{{ $item -> title }}</p>
             </div>
-            <a href="/seemore">
-                <button class="text-sm lg:text-lg hover:bg-white hover:text-black hover:border-[1px] bg-black text-white px-3 py-1 rounded-full">See More</button>
-            </a>
-        </div>
-    </div>
-    <div class="border hover:bg-slate-100 w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
-        <div class="w-full flex justify-between items-center py-3 px-4">
-            <div class="flex justify-start items-center gap-3 lg:gap-5 pr-2">
-                <img src="{{ URL::to('/') }}/img/pelabuhan_batamcenter.jpeg" class="w-32 lg:w-56" alt="ini gambar">
-                <p class="text-sm lg:text-lg font-extrabold">Batam Center Point</p>
-            </div>
-            <a href="/seemore">
+            <a href="{{url('arrival/detail/'. $item->id_arrival)}}">
                 <button class="text-sm lg:text-lg hover:bg-white hover:text-black hover:border-[1px] bg-black text-white px-3 py-1 rounded-full">See More</button>
             </a>
         </div>
     </div>
     <hr>
+    @endforeach
     <div class="items-center justify-center text-center">
         <h1 class="mt-10 text-center lg:text-4xl text-2xl font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Iconic Places in Batam Island</h1>
         <p class="mt-3 text-center">Find which destination you like to go by look out the category below</p>

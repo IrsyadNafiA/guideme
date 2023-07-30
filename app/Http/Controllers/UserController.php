@@ -18,7 +18,8 @@ class UserController extends Controller
     public function arrival($id_arrival)
     {
         $arrivalm = Arrival::find($id_arrival);
-        return view('pages.arrival', ['arrivalm' => $arrivalm], ["title" => "Arrival Location"]);
+        $place = places::all()->where('id_arrival', $id_arrival);
+        return view('pages.arrival', ['arrivalm' => $arrivalm, 'place' => $place], ["title" => "Arrival Location"]);
     }
 
     public function category()

@@ -9,5 +9,19 @@
             <p>{{$arrivalm->address}}</p>
         </div>
     </div>
+    @foreach ($place as $item)
+
+    <div class="hover:bg-slate-100 w-full flex justify-center bg-white shadow-[0_1px_5px_-5px_rgba(0,0,0,0.3)]">
+        <div class="w-[1280px] flex justify-between items-center py-5">
+            <img src="{{asset('images/'.$item->image)}}" alt="{{$item->title}}" class="w-[150px]">
+            <p class="text-lg font-extrabold">{{$item->title}}</p>
+            <a href="{{url('/place'.$item->id_places)}}">
+                <button class="hover:bg-white hover:text-black hover:border-[1px] bg-black text-white px-3 py-1 rounded-full">See More</button>
+            </a>
+        </div>
+    </div>
+    <hr class="h-px bg-gray-300 border-0 dark:bg-gray-700">
+
+    @endforeach
 </div>
 @endsection

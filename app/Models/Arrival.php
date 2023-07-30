@@ -17,6 +17,6 @@ class Arrival extends Model
 
     public function places()
     {
-        return $this->hasMany(places::class, 'id_arrival', 'id_arrival');
+        return $this->hasMany(places::class);
     }
 }

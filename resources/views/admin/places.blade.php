@@ -140,8 +140,8 @@
 
                     <select id="countries" name="coba" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value="{{$editdata->category->category}}">{{$editdata->category->category}}</option>
-                        @foreach ($cat as $pepek)
-                        <option value="{{ $pepek->id_category }}">{{ $pepek->category }}</option>
+                        @foreach ($cat as $data)
+                        <option value="{{ $data->id_category }}">{{ $data->category }}</option>
                         @endforeach
                     </select>
                 </div>

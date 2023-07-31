@@ -3,14 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Arrival;
 use App\Models\places;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function dashboard1()
+    public function home()
     {
-        return view('admin.index', ["title" => "User Page"]);
+        $arrivalm = Arrival::all();
+        return view('pages.home', ['arrivalm' => $arrivalm], ["title" => "Home"]);
+    }
+
+    public function arrival($id_arrival)
+    {
+        $arrivalm = Arrival::find($id_arrival);
+        $place = places::all()->where('id_arrival', $id_arrival);
+        return view('pages.arrival', ['arrivalm' => $arrivalm, 'place' => $place], ["title" => "Arrival Location"]);
     }
 
     public function category()
@@ -25,14 +34,15 @@ class UserController extends Controller
         $data2 = places::all()->where('id_category', $id_kategori);
         // dd($data);
         if ($data !== null) {
-            return view('pages.detail', ['data' => $data,'data2' => $data2 ], ["title" => "Detail"]);
+            return view('pages.detail', ['data' => $data, 'data2' => $data2], ["title" => "Detail"]);
         } else {
             return "Category Not Found";
         }
     }
 
-    public function placedetail($id){
+    public function placedetail($id)
+    {
         $data = places::find($id);
-        return view('pages.seemore', ['data' => $data ], ["title" => "Detail"]);
+        return view('pages.seemore', ['data' => $data], ["title" => "Detail"]);
     }
 }

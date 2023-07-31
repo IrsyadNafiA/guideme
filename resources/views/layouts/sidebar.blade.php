@@ -38,7 +38,7 @@
             <hr class=" lg:bg-black">
 
             <li>
-                <a href="{{route('admin/places')}}" class="{{ Request::is('admin/places') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg hover:bg-gray-100 group">
+                <a href="{{route('admin/arrival')}}" class="{{ Request::is('admin/arrival') ? 'active: bg-gray-100 text' : '' }} flex items-center p-2 text-gray-900 fill-gray-500 hover:fill-black rounded-lg hover:bg-gray-100 group">
                     <svg class="w-7" viewBox="-0.32 -0.32 32.53 32.53" xmlns="http://www.w3.org/2000/svg" stroke-width="0.605853">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

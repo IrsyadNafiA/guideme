@@ -21,6 +21,9 @@ class CreatePlacesTable extends Migration
             $table->string('maps');
             $table->string('description');
             $table->integer('id_category');
+            $table->integer('id_arrival');
+            $table->string('koordinat_1');
+            $table->string('koordinat_2');
             $table->timestamps();
         });
     }

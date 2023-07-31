@@ -67,7 +67,20 @@
                         <option value="{{ $item->id_category }}">{{ $item->category }}</option>
                         @endforeach
                     </select>
-
+                </div>
+                <div class="mb-4 px-4 my-2">
+                    <select id="countries" name="arrival" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option selected disabled>Arrival</option>
+                        @foreach ($arrivalm as $item)
+                        <option value="{{ $item->id_arrival }}">{{ $item->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-4 px-4 my-2">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="koordinat_1" name="koordinat_1" type="text" placeholder="Location Coordinate 1">
+                </div>
+                <div class="mb-4 px-4 my-2">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="koordinat_2" name="koordinat_2" type="text" placeholder="Location Coordinate 2">
                 </div>
                 <div class="flex items-center justify-center w-full">
                     <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">

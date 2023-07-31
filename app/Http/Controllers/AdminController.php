@@ -69,9 +69,10 @@ class AdminController extends Controller
     {
         $placem = places::query()->with('category')->get();
         $cat = Category::all();
+        $arrivalm = Arrival::all();
 
 
-        return view('admin.places', ['placem' => $placem, 'cat' => $cat], ["title" => "Admin Page"]);
+        return view('admin.places', ['placem' => $placem, 'cat' => $cat, 'arrivalm' => $arrivalm], ["title" => "Admin Page"]);
     }
 
     public function store_places(Request $request)
@@ -86,6 +87,9 @@ class AdminController extends Controller
         $model->maps   = $request->map;
         $model->description   = $request->desc;
         $model->id_category   = $request->coba;
+        $model->id_arrival   = $request->arrival;
+        $model->koordinat_1   = $request->koordinat_1;
+        $model->koordinat_2   = $request->koordinat_2;
         $model->image = $request->image->getClientOriginalName();
 
         $nm->move(public_path() . '/images', $request->image->getClientOriginalName());
@@ -116,6 +120,22 @@ class AdminController extends Controller
     {
         $arrivalm = Arrival::all();
         return view('admin.arrival', ['arrivalm' => $arrivalm], ["title" => "Admin Page"]);
+    }
+
+    public function store_arrival(Request $request)
+    {
+        $nm = $request->image;
+        // $namafile = $nm->getClientOriginalName();
+
+        $model = new Arrival();
+        $model->image = $request->image->getClientOriginalName();
+        $model->title = $request->title;
+        $model->address = $request->address;
+
+        $nm->move(public_path() . '/images', $request->image->getClientOriginalName());
+        $model->save();
+
+        return redirect()->back();
     }
     //end arrival
 }

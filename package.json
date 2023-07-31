@@ -20,6 +20,7 @@
         "tailwindcss": "^3.3.2"
     },
     "dependencies": {
+        "leaflet-routing-machine": "^3.2.12",
         "vite": "^4.3.9"
     }
 }

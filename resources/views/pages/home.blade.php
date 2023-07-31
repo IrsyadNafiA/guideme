@@ -17,7 +17,9 @@
 <div class="row mb-2 z-40 relative pt-16">
     <div class="col">
         <div id="map">
-
+            @php
+                
+            @endphp
         </div>
     </div>
 </div>
@@ -86,7 +88,6 @@
 @endsection
 @push('mys')
 <script>
-    var lokasi = document.getElementById('lokasi');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(succesCallback, errorCallback);
     }
@@ -98,7 +99,13 @@
             maxZoom: 19,
             attribution: '<a href="#">Guideme</a>'
         }).addTo(map);
+        @php
+        $cc=1.1232359634821594;
+        $cc2=104.03393943111342;
+        @endphp
         var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
+        var marker = L.marker([@php $cc $cc @endphp]).addTo(map);
+        
         var circle = L.circle([position.coords.latitude, position.coords.longitude], {
             color: 'red',
             fillColor: '#f03',
@@ -106,6 +113,7 @@
             radius: 50
         }).addTo(map);
     }
+
 
     function errorCallback() {
 

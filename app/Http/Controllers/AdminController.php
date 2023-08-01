@@ -110,6 +110,13 @@ class AdminController extends Controller
             return redirect()->back();
         }
     }
+    public function deleteplaces(Request $request, $id)
+    {
+        $data = places::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+    
     /* end places */
     //delete places
 
@@ -136,6 +143,26 @@ class AdminController extends Controller
         $model->save();
 
         return redirect()->back();
+
     }
+
     //end arrival
+    public function editarrival(Request $request, $id)
+    {
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+            $nm = $request->image;
+            $nm->move(public_path() . '/images', $request->image->getClientOriginalName());
+            arrival::where(['id_arrival' => $id])->update(['title' => $data['title'], 'address' => $data['desc'], 'image' => $data['image']->getClientOriginalName()]);
+            return redirect()->back();
+        }
+    }
+    public function deletearrival(Request $request, $id)
+{
+    $data = Arrival::find($id);
+    $data->delete();
+    return redirect()->back();
 }
+}   
+
+

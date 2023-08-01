@@ -6,13 +6,18 @@ use App\Models\Category;
 use App\Models\Arrival;
 use App\Models\places;
 use Illuminate\Http\Request;
+use Illuminate\View\response;
 
 class UserController extends Controller
 {
     public function home()
     {
         $arrivalm = Arrival::all();
-        return view('pages.home', ['arrivalm' => $arrivalm], ["title" => "Home"]);
+        $places = places::all();
+        $lt = $places->where('id_places','1');
+        $lt2 = $places->where('id_places','2');
+        
+        return view('pages.home', ['arrivalm' => $arrivalm], ["title" => "Home"], response()->json($places));
     }
 
     public function arrival($id_arrival)

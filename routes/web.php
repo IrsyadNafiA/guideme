@@ -38,10 +38,15 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('admin/places', [AdminController::class, 'places'])->name('admin/places');
         Route::post('admin/add_places', [AdminController::class, 'store_places'])->name('admin/add_places');
         Route::match(['get', 'post'], '/edit_places{id}', [AdminController::class, 'editplaces'])->name('/edit_places{id}');
+        Route::match(['get', 'post', 'delete'], '/delete_places{id}', [AdminController::class, 'deleteplaces'])->name('/delete_places{id}');
 
 
         Route::get('admin/arrival', [AdminController::class, 'arrival'])->name('admin/arrival');
         Route::post('admin/add_arrival', [AdminController::class, 'store_arrival'])->name('admin/add_arrival');
+        Route::match(['get', 'post'], '/edit_arrival{id}', [AdminController::class, 'editarrival'])->name('/edit_arrival{id}');
+        Route::match(['get', 'post', 'delete'], '/delete_arrival{id}', [AdminController::class, 'deletearrival'])->name('/delete_arrival{id}');
+
+
     });
 
     Route::group(['middleware' => 'Cek_login:user'], function () {

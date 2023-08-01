@@ -17,9 +17,7 @@
 <div class="row mb-2 z-40 relative pt-16">
     <div class="col">
         <div id="map">
-            @php
-                
-            @endphp
+          
         </div>
     </div>
 </div>
@@ -90,12 +88,21 @@
             maxZoom: 19,
             attribution: '<a href="#">Guideme</a>'
         }).addTo(map);
-        @php
-        $cc=1.1232359634821594;
-        $cc2=104.03393943111342;
-        @endphp
+
         var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
-        var marker = L.marker([@php $cc $cc @endphp]).addTo(map);
+
+        new Promise((resolve, ex) => {
+            fetch('/api/location')
+            .then(res => res.json())
+            .then(res => {
+                res.forEach(place => {
+                    L.marker([place.koordinat_1, place.koordinat_2]).addTo(map)
+                });
+            })
+        })
+
+        // var marker = L.marker([1.1360178980290612, 104.04311396545326]).addTo(map);
+        // var marker = L.marker([]).addTo(map);
         
         var circle = L.circle([position.coords.latitude, position.coords.longitude], {
             color: 'red',
@@ -109,5 +116,7 @@
     function errorCallback() {
 
     }
+
+    
 </script>
 @endpush
